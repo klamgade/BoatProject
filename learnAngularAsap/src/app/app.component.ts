@@ -19,7 +19,6 @@ peopleList: User[] = [];
       name:"kamal",
       image: "n/a"
     };
-
     this.peopleList.push(people);
   }
 
