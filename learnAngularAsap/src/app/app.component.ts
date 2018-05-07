@@ -1,27 +1,79 @@
-import { Component } from '@angular/core';
-import { User } from './interface';
+import { Component, OnInit } from '@angular/core';
+import { User, Student } from './interface';
+import { FormBuilder, FormGroup, FormArray, NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
-
-
+export class AppComponent implements OnInit{
+title = 'app';
 peopleList: User[] = [];
+studentList: Student[] = [];
+form: FormGroup;
+isActive: true;
+
+
+  constructor(private formBuilder: FormBuilder )
+  {
+    this.studentList = [
+      {name: "kamal" , 
+        skills:[{
+            id:1, name:"JS", selected: true
+        }]
+      }]
+
+      this.form = this.formBuilder.group({
+          skills: this.buildSkills()
+      })
+  }
 
   ngOnInit(): void {
 
-    let people = {
-      email: "yy@gmail.com",
-      name:"kamal",
-      image: "n/a"
-    };
-    this.peopleList.push(people);
   }
 
+  saveStudent(studentForm: NgForm){
+    debugger;
+    console.log(studentForm);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getSkills()  {
+    return this.form.get('skills');
+  }
+
+  buildSkills() : void {
+  }
 
   addPerson():void{
 
