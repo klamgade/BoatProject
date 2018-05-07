@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User, Student } from './interface';
-import { FormBuilder, FormGroup, FormArray, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, NgForm, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -15,6 +15,10 @@ studentList: Student[] = [];
 form: FormGroup;
 isActive: true;
 
+
+//heroForm section
+hero = {name: 'Dr.Matt'};
+heroForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder )
   {
@@ -31,8 +35,16 @@ isActive: true;
   }
 
   ngOnInit(): void {
-
+    this.heroForm = new FormGroup({
+      'name': new FormControl(this.hero.name, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+      //'power': new FormControl(this.hero.power, Validators.required)
+    });
   }
+
+  get name() { return this.heroForm.get('name'); }
 
   saveStudent(studentForm: NgForm){
     debugger;
