@@ -21,3 +21,14 @@
         </select>
       </label>
     </div>
+
+
+    <!-- Radio: Hero Detail Controls -->
+  <div class="form-group radio">
+      <h4>Super power:</h4>
+      <label class="center-block"><input type="radio" formControlName="power" value="flight">Flight</label>
+      <label class="center-block"><input type="radio" formControlName="power" value="x-ray vision">X-ray vision</label>
+      <label class="center-block"><input type="radio" formControlName="power" value="strength">Strength</label>
+    </div>
+
+    <p> Form Value: {{heroForm.value | json}}</p>
