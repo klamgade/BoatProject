@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormctrlInFormgrpComponent } from './formctrl-in-formgrp/formctrl-in-formgrp.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormctrlInFormgrpComponent
   ],
   imports: [
     BrowserModule,

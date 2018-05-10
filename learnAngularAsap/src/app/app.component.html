@@ -1,3 +1,8 @@
+<aside>
+
+</aside>
+
+<h3><i>##group with mulitiple controls##</i></h3>
 <form [formGroup]="heroForm">
     <div class="form-group">
       <label class="center-block">Name:
@@ -5,7 +10,7 @@
       </label>
     </div>
     <div class="form-group">
-      <label class="center-block">Street:
+      <label class="cen   ter-block">Street:
         <input class="form-control" formControlName="street">
       </label>
     </div>
@@ -31,4 +36,20 @@
       <label class="center-block"><input type="radio" formControlName="power" value="strength">Strength</label>
     </div>
 
+    <!--checkbox-->
+    <div class="checkbox">
+        <label class="center-block">
+          <input type="checkbox" formControlName="openingbalance">Opening Balance
+        </label>
+      </div>
+
     <p> Form Value: {{heroForm.value | json}}</p>
+    <app-formctrl-in-formgrp></app-formctrl-in-formgrp>
+
+
+      <!--Learnings on model concepts and flow-->
+    <p>My favorite hero is: </p>
+    <div *ngFor="let item of heroes"> 
+          <li>{{item.Name}}</li> 
+    </div>   
+    <p *ngIf="heroes.length > 1">There are 2 or more heroes!</p>
