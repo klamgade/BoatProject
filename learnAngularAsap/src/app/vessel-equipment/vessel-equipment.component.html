@@ -1,0 +1,264 @@
+<div style="width: 40%;float:left">
+    <section>
+        <div class="column-wrapper">
+          <div class="column-1of1">
+            <h3>Navigation</h3>
+            <p class="float-right">fields in
+              <strong>Bold</strong> are compulsory</p>
+          </div>
+        </div>
+        <div class="column-wrapper">
+          <div class="column-1of1">
+            <form [formGroup]="NavigationSafetyForm" action="">
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Image)</strong>
+                  </label>
+                </div>
+                  <div class="form-input form-half-col">
+                    <input type="text" class="form-control" formControlName="Image">
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">Equipment</label>
+                </div>
+                <div class="form-input form-half-col">
+                  <input type="text" class="form-control" formControlName="Equipment">
+                </div>
+              </div>
+      
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Description</strong>
+                  </label>
+                </div>
+                <div class="form-input form-half-col">
+                  <input type="text" class="form-control" formControlName="Description">
+                </div>
+              </div>
+      
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Location</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="Location">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Certificate Number</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="CertificateNumber">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Certificate</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="Certificate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Expiry Indicator</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ExpiryIndicator">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Expirty Date</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ExpirtyDate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Last Serivce Date</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="LastSerivceDate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Service Frequency</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ServiceFrequency">
+                </div>
+              </div>
+      
+              <!--to update data , storing in session storage-->
+              <p>Form Value; {{NavigationSafetyForm.value | json}}</p>
+              <button type="button" (click)="onUpdateNavigationSafety()">Update</button>
+            </form>
+          </div>
+        </div>
+      </section>
+</div>
+<div style="width: 40%; float:right">
+    <section>
+        <div class="column-wrapper">
+          <div class="column-1of1">
+            <h3>Life Safety</h3>
+            <p class="float-right">fields in
+              <strong>Bold</strong> are compulsory</p>
+          </div>
+        </div>
+        <div class="column-wrapper">
+          <div class="column-1of1">
+            <form [formGroup]="LifesavingSafetyForm" action="">
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Image)</strong>
+                  </label>
+                </div>
+                  <div class="form-input form-half-col">
+                    <input type="text" class="form-control" formControlName="Image">
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">Equipment</label>
+                </div>
+                <div class="form-input form-half-col">
+                  <input type="text" class="form-control" formControlName="Equipment">
+                </div>
+              </div>
+      
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Description</strong>
+                  </label>
+                </div>
+                <div class="form-input form-half-col">
+                  <input type="text" class="form-control" formControlName="Description">
+                </div>
+              </div>
+      
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Location</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="Location">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Certificate Number</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="CertificateNumber">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Certificate</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="Certificate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Expiry Indicator</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ExpiryIndicator">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Expirty Date</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ExpirtyDate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Last Serivce Date</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="LastSerivceDate">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Service Frequency</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="ServiceFrequency">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Batch number</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="BatchNumber">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-label">
+                  <label for="">
+                    <strong>Batch Count</strong>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input type="text" class="form-control" formControlName="BatchEquipmentCount">
+                </div>
+              </div>
+      
+              <!--to update data , storing in session storage-->
+              <p>Form Value; {{NavigationSafetyForm.value | json}}</p>
+              <button type="button" (click)="onUpdateLifesavingSafety()">Update</button>
+            </form>
+          </div>
+        </div>
+      </section>
+  </div>
+
+
