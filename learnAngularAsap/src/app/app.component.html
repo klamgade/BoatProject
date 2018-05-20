@@ -1,9 +1,20 @@
 
+  
+  
+  <div class="form-group">
+    <label for="department">Department</label>
+    <select id="department" name="department" (change)="categorySelect($event)" [(ngModel)]="Department" class="form-control">
+      <option *ngFor="let dept of departments" [value]="dept.id" >
+        {{dept.name}}
+      </option>
+    </select>
+  </div>
+  
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        <mat-option *ngFor="let option of filteredOptions" [value]="option">
           {{ option }}
         </mat-option>
       </mat-autocomplete>
