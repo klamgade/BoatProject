@@ -1,57 +1,69 @@
-<aside>
 
-</aside>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
 
-<h3><i>##group with mulitiple controls##</i></h3>
+
+<!-- 
+  <i>##group with mulitiple controls##</i>
+</h3>
 <form [formGroup]="heroForm">
-    <div class="form-group">
-      <label class="center-block">Name:
-        <input class="form-control" formControlName="name">
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="cen   ter-block">Street:
-        <input class="form-control" formControlName="street">
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">City:
-        <input class="form-control" formControlName="city">
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">State:
-        <select class="form-control" formControlName="state">
-            <option *ngFor="let state of states" [value]="state">{{state}}</option>
-        </select>
-      </label>
-    </div>
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="cen   ter-block">Street:
+      <input class="form-control" formControlName="street">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">City:
+      <input class="form-control" formControlName="city">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">State:
+      <select class="form-control" formControlName="state">
+        <option *ngFor="let state of states" [value]="state">{{state}}</option>
+      </select>
+    </label>
+  </div>
 
 
-    <!-- Radio: Hero Detail Controls -->
+
   <div class="form-group radio">
-      <h4>Super power:</h4>
-      <label class="center-block"><input type="radio" formControlName="power" value="flight">Flight</label>
-      <label class="center-block"><input type="radio" formControlName="power" value="x-ray vision">X-ray vision</label>
-      <label class="center-block"><input type="radio" formControlName="power" value="strength">Strength</label>
-    </div>
+    <h4>Super power:</h4>
+    <label class="center-block">
+      <input type="radio" formControlName="power" value="flight">Flight</label>
+    <label class="center-block">
+      <input type="radio" formControlName="power" value="x-ray vision">X-ray vision</label>
+    <label class="center-block">
+      <input type="radio" formControlName="power" value="strength">Strength</label>
+  </div>
 
-    <!--checkbox-->
-    <div class="checkbox">
-        <label class="center-block">
-          <input type="checkbox" formControlName="openingbalance">Opening Balance
-        </label>
-      </div>
+  <div class="checkbox">
+    <label class="center-block">
+      <input type="checkbox" formControlName="openingbalance">Opening Balance
+    </label>
+  </div>
 
-    <p> Form Value: {{heroForm.value | json}}</p>
-    <app-formctrl-in-formgrp></app-formctrl-in-formgrp>
+  <p> Form Value: {{heroForm.value | json}}</p>
+  <app-formctrl-in-formgrp></app-formctrl-in-formgrp>
 
 
-      <!--Learnings on model concepts and flow-->
-    <p>My favorite hero is: </p>
-    <div *ngFor="let item of heroes"> 
-          <li>{{item.Name}}</li> 
-    </div>   
-    <p *ngIf="heroes.length > 1">There are 2 or more heroes!</p>
+  <p>My favorite hero is: </p>
+  <div *ngFor="let item of heroes">
+    <li>{{item.Name}}</li>
+  </div>
+  <p *ngIf="heroes.length > 1">There are 2 or more heroes!</p>
 
-    <app-vessel-equipment style="width: 100%"></app-vessel-equipment>
+  <app-vessel-equipment style="width: 100%"></app-vessel-equipment> -->
